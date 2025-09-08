@@ -112,7 +112,7 @@ const MapPage = () => {
         type: 'geo_fence',
         severity: 'high',
         message: `You are near a restricted area: ${location.title}`,
-        location: { lat: location.lat, lng: location.lng },
+        location: { lat: location.lat, lng: location.lng, timestamp: Date.now() },
         isRead: false
       });
     }

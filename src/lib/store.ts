@@ -80,6 +80,8 @@ interface AppState {
     phone: string;
     relationship: string;
     isPrimary: boolean;
+    email?: string;
+    address?: string;
   }>;
   setLanguage: (language: string) => void;
   setOnlineStatus: (isOnline: boolean) => void;

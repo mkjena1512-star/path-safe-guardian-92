@@ -1,6 +1,8 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { PWAInstaller, PWAInstallSuccess } from "@/components/PWAInstaller";
+import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from 'react';
@@ -39,6 +41,9 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <OfflineIndicator />
+        <PWAInstaller />
+        <PWAInstallSuccess />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
